@@ -50,5 +50,14 @@ read_id	read_length	polya_start	polya_end	polya_start_base	polya_end_base	polya_
 05e2c771-9cfe-4d04-95ec-3aae5f8cea67	1278	20864	22089	1207	1222	92.1577325939618	1226	polyA
 ```
 
+## 6. polt
+
+```
+import polyAcaller
+read = polyAcaller.Fast5ReadWrapper("example/test_sample1.fast5")
+read.plot()
+```
+
+![](img/polya_example1.png)
 
 
