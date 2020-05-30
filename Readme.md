@@ -31,11 +31,11 @@ search region:                       ||||||||||-------------------------*****
                                      |--10nt--|                         |5nt|
 ```
 
-The next version will implemented adaper searching and genome mapping. But now
+The next version will include adaper searching and genome mapping. But now
 you can use minimap2 to perform genome mapping and use blastn or other tools to 
 find adapter, and then set the search region based on the mapping information.
 
-## 4. input file format
+## 4. Input file format
 
 test_data/test_sample2.search_region.txt (tab sperated):
 ```
@@ -43,7 +43,7 @@ read_id 	base 	search_start_base 	search_end_base
 000478c6-4c63-4cb7-baca-ca4954a12ee6 	A 	266 	274
 ```
 
-## 5. output file format
+## 5. Output file format
 
 ```
 read_id	read_length	polya_start	polya_end	polya_start_base	polya_end_base	polya_length	polya_score	polya_type
@@ -52,7 +52,7 @@ read_id	read_length	polya_start	polya_end	polya_start_base	polya_end_base	polya_
 05e2c771-9cfe-4d04-95ec-3aae5f8cea67	1278	20864	22089	1207	1222	92.1577325939618	1226	polyA
 ```
 
-## 6. polt
+## 6. olt
 
 ```
 import polyAcaller
