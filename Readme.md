@@ -2,6 +2,8 @@
 
 Predicate potential poly(A) regions from Nanopore fast5 file which has been basecalled by guppy with flipflop mode.
 
+Maintained by Jinbu Jia, Weipeng Mo, Zhijian Liu.
+
 ## 1. For extract the best polyA region:
 ```
 python polyAcaller.py test_data/test.fast5 test.out 
