@@ -58,6 +58,60 @@ read = polyAcaller.Fast5ReadWrapper("example/test_sample1.fast5")
 read.plot()
 ```
 
+The cyan-blue region indicates the sequence region.
+The grown region indicates the longer polyA region.
+
 ![](img/polya_example1.png)
+
+The parameters of plot method:
+```
+figsize = None #such as [10, 5]
+plot_all_polyA_region=False 
+plot_base=False
+plot_base_line=False
+xlim=None
+ylim=None
+```
+
+You can set xlim to zoom in:
+```
+read.plot(xlim=[500,4000])
+```
+
+![](img/polya_example2.png)
+
+
+You can add the base sequence above the raw signal.
+But this will be slower.
+```
+read.plot(xlim=[500,4000], plot_base=True)
+```
+
+![](img/polya_example3.png)
+
+
+
+You also can add the border line of bases.
+
+```
+read.plot(xlim=[1000,1300], plot_base=True, plot_base_line=True)
+```
+
+![](img/polya_example4.png)
+
+You can save the figure like this:
+
+```
+read.plot(xlim=[500,4000])
+read.savefig("test_data/example.pdf")
+```
+
+Furthermore, the matplotlib object fig and ax has been 
+stored in `read.fig`, `read.ax`.
+
+## 7. The object of Fast5ReadWrapper
+
+
+
 
 
