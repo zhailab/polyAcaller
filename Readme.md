@@ -1,4 +1,4 @@
-# PolyACaller
+# PolyAcaller
 
 Predicate potential poly(A) regions from Nanopore fast5 file which has been basecalled by guppy with flipflop mode.
 
