@@ -4,20 +4,34 @@ Predicate potential poly(A) regions from Nanopore fast5 file which has been base
 
 Maintained by Jinbu Jia, Weipeng Mo, Zhijian Liu.
 
-## 1. For extract the best polyA region:
+## 0. Install
+
 ```
-python polyAcaller.py test_data/test.fast5 test.out 
+git clone https://github.com/zhailab/polyAcaller.git
+cd polyAcaller
+python setup.py install
+````
+
+## 1. For extract the best polyA region:
+
+```
+cd example #you need run not in git install package
+```
+
+```
+polyAcaller test_sample1.fast5 test_run.out
 ```
 
 ## 2. For extract all potential polyA region:
+
 ```
-python polyAcaller.py test_data/test.fast5 test.out 0 #default 1
+polyAcaller test_sample1.fast5  test_run.out 0 #default 1
 ```
 
 ## 3. For extract the best polyA region in a specific region:
 
 ```
-python polyAcaller.py test_data/test.fast5 test.out 0 test_data/test_sample2.search_region.txt
+polyAcaller test_sample2.fast5 test_run_.out 0 test_sample2.search_region.txt
 ```
 
 It's better to limit the polyA search region in a specific region. 
@@ -37,7 +51,8 @@ find adapter, and then set the search region based on the mapping information.
 
 ## 4. Input file format
 
-test_data/test_sample2.search_region.txt (tab sperated):
+test_sample2.search_region.txt (tab sperated):
+
 ```
 read_id 	base 	search_start_base 	search_end_base
 000478c6-4c63-4cb7-baca-ca4954a12ee6 	A 	266 	274
@@ -55,8 +70,8 @@ read_id	read_length	polya_start	polya_end	polya_start_base	polya_end_base	polya_
 ## 6. Plot
 
 ```
-import polyAcaller
-read = polyAcaller.Fast5ReadWrapper("example/test_sample1.fast5")
+from polyacaller import Fast5ReadWrapper
+read = Fast5ReadWrapper("test_sample1.fast5")
 read.plot()
 ```
 
@@ -112,6 +127,10 @@ Furthermore, the matplotlib object fig and ax has been
 stored in `read.fig`, `read.ax`.
 
 ## 7. The object of Fast5ReadWrapper
+
+```
+help(Fast5ReadWrapper)
+```
 
 
 

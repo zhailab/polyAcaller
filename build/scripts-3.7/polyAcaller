@@ -1,0 +1,8 @@
+#!/public/home/jiajb/miniconda3/bin/python
+#-*- coding: utf-8 -*-
+
+import sys
+from polyacaller import main
+
+if __name__ == "__main__":
+    main(sys.argv)

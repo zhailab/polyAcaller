@@ -1,0 +1,11 @@
+setup.cfg
+setup.py
+bin/polyAcaller
+polyAcaller.egg-info/PKG-INFO
+polyAcaller.egg-info/SOURCES.txt
+polyAcaller.egg-info/dependency_links.txt
+polyAcaller.egg-info/not-zip-safe
+polyAcaller.egg-info/requires.txt
+polyAcaller.egg-info/top_level.txt
+polyacaller/__init__.py
+polyacaller/fast5readwrapper.py
