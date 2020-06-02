@@ -6,7 +6,18 @@ def get_version(string):
     version_re = r"^__version__ = ['\"]([^'\"]*)['\"]"
     version_str = re.search(version_re, string, re.M).group(1)
     return version_str
-    
+
+class CleanCommand(Command):
+    """Custom clean command to tidy up the project root."""
+    user_options = []
+    def initialize_options(self):
+        pass
+    def finalize_options(self):
+        pass
+    def run(self):
+        os.system('rm -vrf ./build ./dist ./*.pyc ./*.tgz ./*.egg-info')
+
+
 install_requires_py = ["numpy >=1.16",
                        "matplotlib ==3.1.1",
                        "pandas",
