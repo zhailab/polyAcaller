@@ -144,6 +144,22 @@ class Fast5ReadWrapper:
         |766  |     1    |  G | 12         |
         |778  |     2    |  C | 2          |
         ------------------------------------
+        
+        Note:
+        pA_val = scale * (raw + offset)
+        
+        raw (event) ---------------------------------------------------------------------------
+        
+        frist_template_start    |
+        
+        move (stride = 4) index 0    1    2    3    4 ....
+                                |    |    |    |    | ....
+                          value 1    0    0    0    1 ....
+        base              index 0                   1 ...
+                          value C                   T ..
+        
+        
+       
         """
         try:
             read = self.get_read(self.read_id)
