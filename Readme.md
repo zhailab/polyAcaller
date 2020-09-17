@@ -1,5 +1,21 @@
 # PolyAcaller
 
+
+The neweast version of PolyAcaller has been deposited in https://github.com/ZhaiLab-SUSTech/FLEPSeq, please use th neweast one.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Predicate potential poly(A) regions from Nanopore fast5 file which has been basecalled by guppy with flipflop mode.
 
 Maintained by Jinbu Jia, Weipeng Mo, Zhijian Liu.
